@@ -1,5 +1,5 @@
 <template>
-  <div class="hello">
+  <!-- <div class="hello">
       <label>Hints</label>
       
 <p>
@@ -24,17 +24,13 @@
     you are not register then,<br>
     <a href="#">Signup</a>
   </p>
-</form>
+</form> -->
 
-<!-- <v-form
+<v-form
   ref="form"
   v-model="valid"
   lazy-validation
 >
-<p>
-       username: kminchelle<br/>
-     password: 0lelplR
-      </p>
   <v-text-field
   v-model="userData.username"
    :counter="10"
@@ -61,8 +57,8 @@
     Login
   </v-btn>
 
-</v-form> -->
-  </div>
+</v-form>
+  <!-- </div> -->
 </template>
 
 <script>
@@ -85,10 +81,10 @@ export default {
   headers: { 'Content-Type': 'application/json' },
   body: JSON.stringify({
     
-    username: 'kminchelle',
-     password: '0lelplR'
-    // username: this.userData.username,
-    // password: this.userData.password,
+    // username: 'kminchelle',
+    //  password: '0lelplR'
+    username: this.userData.username,
+    password: this.userData.password,
     // expiresInMins: 60, // optional
   })
 })

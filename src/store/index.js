@@ -68,7 +68,7 @@ export default new Vuex.Store({
     fetchAllProduct({commit},[ limits , skip]) {
       console.log(limits)
       console.log(skip)
-      return fetch( `https://dummyjson.com/products?limit=${limits}&skip=${skip} ` )
+      return fetch( `https://dummyjson.com/products/?limit=${limits}&skip=${skip} ` )
         .then((response) => response.json())
         .then((data) => {
           commit("setProduct", data);
