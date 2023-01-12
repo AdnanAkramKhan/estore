@@ -30,10 +30,12 @@
   ref="form"
   v-model="valid"
   lazy-validation
+  style="margin:120px;width:30rem;"
 >
+<v-card-title class="success darken-2 text-left " >  <span class="white--text">Login </span></v-card-title>
   <v-text-field
   v-model="userData.username"
-   :counter="10"
+   :counter="20"
     :rules="nameRules"
     label="UserName"
     required
@@ -107,18 +109,4 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-h3 {
-  margin: 40px 0 0;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
 </style>
